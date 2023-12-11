@@ -57,7 +57,6 @@ def draw_grid(img, grid_shape, color=(0, 255, 0), thickness=1):
     return img
 
 def hands_yolo(img, model):
-    print(img.shape)
     img = cv2.resize(img, (640, 640))
 
     img = torch.from_numpy(img.copy()).to(device)
@@ -511,7 +510,7 @@ if __name__ == "__main__":
                         )
 
     parser.add_argument('-t', '--model_type',
-                        default='dpt_beit_large_512',
+                        default='dpt_large_384',
                         help='Model type: '
                              'dpt_beit_large_512, dpt_beit_large_384, dpt_beit_base_384, dpt_swin2_large_384, '
                              'dpt_swin2_base_384, dpt_swin2_tiny_256, dpt_swin_large_384, dpt_next_vit_large_384, '

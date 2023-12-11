@@ -17,10 +17,7 @@ from yolov7.utils.torch_utils import select_device, load_classifier, time_synchr
 
 def load_yolo():
     device = '0'
-    # weights = './yolov7/runs/train/tiny/yolov7-tiny.pt'
-    weights = './yolov7/runs/train/yolov7x/weights/best.pt'
-    # weights = './yolov7/runs/train/yolov7-custom4/weights/best.pt'
-    # weights = './yolov7/runs/train/yolov7-custom/weights/best.pt'
+    weights = './weights/yolov7_best.pt'
 
     device = select_device(device)
     model = attempt_load(weights, map_location=device)  # load FP32 model
